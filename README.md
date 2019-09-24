@@ -3,10 +3,10 @@ the purpose of software is to analyze every point of netCDF file to establish  i
 
 
 Requirements:
-mongodb 
-python 2.7 
-python Module: 
+mongodb,
+python 2.7.
 
-pyMongo
-netCDF4
-multiprocessing
+Python Module:
+pyMongo,
+netCDF4,
+multiprocessing,
