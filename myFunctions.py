@@ -18,8 +18,8 @@ import wget
 import datetime
 
 #insert your path
-localPath = "/home/rosario/Scrivania/dataTemp1"
-#localPath = "/Users/rosarioriccio/Desktop/dataTemp"
+localPath = "<insert your path where are netcdf files>"
+
 url = "http://193.205.230.6:8080/opendap/hyrax/opendap/wrf5"
 
 
