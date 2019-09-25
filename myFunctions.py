@@ -107,7 +107,7 @@ class MyTool(object):
                                     urls.append(url1)
                                     # filename = wget.download(url1,"/Users/rosarioriccio/PycharmProjects/prova1/d01")
                                     # print(filename)
-                                    # print("file salvato in locale: " + fname)
+                                    # print("file saved in local storage: " + fname)
                                     print("file exists online: " + fname)
                                 except Exception as e:
                                     print("file doesn't exists online")
