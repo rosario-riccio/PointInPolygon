@@ -24,10 +24,10 @@ url = "http://193.205.230.6:8080/opendap/hyrax/opendap/wrf5"
 
 
 """Step 1:
-A) to check if DB was actived
-B) to check if labels existed
-C) to check if polygons existed
-D) to check if every polygon had its label
+A) to check if DB is actived
+B) to check if labels exists
+C) to check if polygons exists
+D) to check if every polygon has its label
 """
 try:
     managedb1 = ManageDB()
