@@ -29,8 +29,6 @@ B) to check if labels existed
 C) to check if polygons existed
 D) to check if every polygon had its label
 """
-
-#Controllo attivazione DB,presenza label,polygon,polygon senza etichetta
 try:
     managedb1 = ManageDB()
 except Exception as e:
@@ -68,7 +66,7 @@ class MyTool(object):
         pass
 
     def getUrls(self,rStart,rEnd,yStart,yEnd,mStart,mEnd,dStart,dEnd,hStart,hEnd):
-        """this method allows to create a specific path and seek this one on local storage or internet"""
+        """this method allows to create a specific path and seeks this one on local storage or internet"""
         urls = []
         ncfiles = []
         print("-------------")
@@ -102,7 +100,7 @@ class MyTool(object):
                             localPath2 = localPath1 + "/" + fname
                             print(localPath2)
                             if not os.path.isfile(localPath2):
-                                print("file non presente in locale: " + fname)
+                                print("file doesn't exist in local storage: " + fname)
                                 try:
                                     nc = Dataset(url1)
                                     nc.close()
@@ -110,11 +108,11 @@ class MyTool(object):
                                     # filename = wget.download(url1,"/Users/rosarioriccio/PycharmProjects/prova1/d01")
                                     # print(filename)
                                     # print("file salvato in locale: " + fname)
-                                    print("file presente online: " + fname)
+                                    print("file exists online: " + fname)
                                 except Exception as e:
-                                    print("file non presente online")
+                                    print("file doesn't exists online")
                             else:
-                                print("file presente in locale: " + fname)
+                                print("file exists in local storage: " + fname)
                                 ncfiles.append(localPath2)
         return ncfiles,urls
 
@@ -148,6 +146,7 @@ class MyTool(object):
             return None,None
 
     def assignTypeStorm(self,managedb,polygon):
+        """This method associates a specific value to label"""
         result,cursorLabelCollection1 = managedb.listLabelCollectionDB()
         if(result != True):
            print("Error: there aren't labels")
