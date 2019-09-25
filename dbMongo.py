@@ -9,7 +9,7 @@ class ManageDB(object):
             self.client = MongoClient("mongodb://localhost:27017/")
             db = self.client.MediStormSeekerDB
         except Exception as e:
-            print("db non pronto " + str(e))
+            print("db not ready " + str(e))
         self.db = db
 
     def getPolygonOnDate(self,date1):
