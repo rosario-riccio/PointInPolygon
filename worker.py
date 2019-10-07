@@ -14,8 +14,8 @@ import os
 import sys
 
 #insert your netcdf path
-localPath = "/home/rosario/Scrivania/dataTemp1"
-#localPath = "/Users/rosarioriccio/Desktop/dataTemp"
+localPath = "<your_local_path>"
+
 url = "http://193.205.230.6:8080/opendap/hyrax/opendap/wrf5"
 
 def workerUrls(url):
