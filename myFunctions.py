@@ -20,8 +20,7 @@ import wget
 
 
 #insert your path
-localPath = "/home/rosario/Scrivania/dataTemp1"
-#localPath = "/Users/rosarioriccio/Desktop/dataTemp"
+localPath = "<your_local_path>"
 url = "http://193.205.230.6:8080/opendap/hyrax/opendap/wrf5"
 
 
@@ -69,8 +68,7 @@ class MyTool(object):
         """This is constructor"""
         pass
 
-
-    def getUrls1(self,rStart,rEnd,yStart,mStart,dStart,hStart,yEnd,mEnd,dEnd,hEnd):
+    def getUrls(self,rStart,rEnd,yStart,mStart,dStart,hStart,yEnd,mEnd,dEnd,hEnd):
         urls = []
         ncfiles = []
         for r in range(rStart,rEnd+1):
