@@ -20,8 +20,8 @@ def main():
     nThreads = multiprocessing.cpu_count()
     print("Number of threads",nThreads)
     mytool = MyTool()
-    #resolution(start,end), years(start,end), months(start,end), days(start,end), hours(start,end)
-    ncfiles,urls = mytool.getUrls(1,1,2018,2018,10,10,29,29,0,0)
+    #resolution, start date, end date
+    ncfiles,urls = mytool.getUrls(1,1,2018,10,29,0,2018,10,29,2)
     print("------------------------------------------------------------------------------------")
     print("number of file in local storage:",len(ncfiles),"number of file in internet:",len(urls))
     p = multiprocessing.Pool(processes=nThreads)
