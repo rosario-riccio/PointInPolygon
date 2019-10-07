@@ -9,7 +9,7 @@ class ManageDB(object):
             self.client = MongoClient("mongodb://localhost:27017/")
             db = self.client.MediStormSeekerDB
         except Exception as e:
-            print("db not ready " + str(e))
+            print("db non pronto " + str(e))
         self.db = db
 
     def getPolygonOnDate(self,date1):
@@ -57,4 +57,3 @@ class ManageDB(object):
         print("Number of polygon without its label n.",count)
         cursorPolygon = self.db.PolygonCollection.find({"properties.name": name})
         return cursorPolygon
-
